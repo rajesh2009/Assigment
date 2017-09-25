@@ -1,0 +1,29 @@
+<div className="container panel panel-default">
+    
+    <div className="panel-body">
+    <div className="row">
+                <div className="col-sm-5">
+                <input type="text"
+                className="form-control"			   
+                onChange={this.filter.bind(this)} />
+        </div>
+       <div className="col-sm-6">
+                <button
+                    type="button"
+                    className="btn btn-success"
+                    onClick={this.sorts.bind(this)}>
+                    sort
+                </button>
+        </div>
+    </div>
+    <div className="panel-body">
+        <h3>Available pizzas</h3>
+         <ul className="list-group">
+           {lists.map(list => 
+            <User key={list} user={list} />
+           )}
+        </ul>
+    </div>
+    </div>
+    
+</div>
